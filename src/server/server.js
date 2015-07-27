@@ -14,8 +14,7 @@ app.use(bodyParser.json());
 app.get("/session", sessionRoutes.list);
 app.post("/session", sessionRoutes.create);
 
-//var MONGOHQ_URL= "mongodb://heroku:OwFFaFMJE_JU0fP0WvlL2SA3Z67DnTITYQBKH3-cjIPhINt2mYW7sA3aK00_m0r5oEtP6D0UDb5f6oiF-OvvLw@candidate.41.mongolayer.com:10853,candidate.40.mongolayer.com:10704/app39314866";
-var MONGOHQ_URL = "mongodb://localhost";
+//var MONGOHQ_URL = "mongodb://localhost";
 mongoose.connect(MONGOHQ_URL);
 
 var server = app.listen(process.env.PORT || 3000, function () {
