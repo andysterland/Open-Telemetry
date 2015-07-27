@@ -15,7 +15,7 @@ app.get("/session", sessionRoutes.list);
 app.post("/session", sessionRoutes.create);
 
 //var MONGOHQ_URL = "mongodb://localhost";
-mongoose.connect(MONGOHQ_URL);
+mongoose.connect(process.env.MONGOHQ_URL);
 
 var server = app.listen(process.env.PORT || 3000, function () {
     var host = server.address().address;
